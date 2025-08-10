@@ -1,21 +1,8 @@
 #include "network.h"
 
-/*
-
-    httplib::Client bmclapi("https://bmclapi2.bangbang93.com");
-
-    https://bmclapi2.bangbang93.com/mc/game/version_manifest.json
-
-    httplib::DownloadProgress progress;
-    bmclapi.Get("/mc/game/version_manifest.json", progress);
-
-*/
-
-// https://codesignal.com/learn/courses/efficient-api-interactions-with-cpp/lessons/downloading-files-from-an-api-in-cpp
-
 void network::download(const char* baseurl, const char* path2file, const char* filename, httplib::DownloadProgress progress)
 {
-    //spdlog::info("network.cpp::download() | {} file started downloading.", filename);
+    log_trace("network.cpp::download() | '%s' file started downloading.", filename);
     httplib::Client bmclapi(baseurl);
 
     bmclapi.set_keep_alive(true);
@@ -25,18 +12,21 @@ void network::download(const char* baseurl, const char* path2file, const char* f
 
     httplib::Result res = bmclapi.Get(path2file);
 
-
     if (res && res->status == 200)
     {
         std::ofstream ofs(filename, std::ios::binary);
 
-        if (!ofs) { return; } // TODO: Logger
+        if (!ofs)  { log_error("network.cpp::download() | Failed to open file '%s' for writing.", filename); return; }
 
         ofs << res->body;
         ofs.close();
 
-        return; //TODO: Logger
+        log_info("network.cpp::download() | File '%s' successfully downloaded!", filename);
+        return;
     }
-    else {  return; //TODO: Logger      res->status 
+    else
+    {  
+        log_warn("network.cpp::download() | Download failed. HTTP status: %d", res->status);
+        return;
     }
 }

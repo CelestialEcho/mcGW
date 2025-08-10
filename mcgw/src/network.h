@@ -5,6 +5,7 @@
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 
 #include <fstream>
+#include "log.h"
 
 
 

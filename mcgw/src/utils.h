@@ -7,7 +7,7 @@
 
 namespace utils
 {
-    
+    void gen_struct();
 }
 
 #endif /* UTILS_H */

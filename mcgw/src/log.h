@@ -1,24 +1,23 @@
 #ifndef LOG_H
 #define LOG_H
 
-#include <stdio.h>
+#include <io.h>
 #include <time.h>
-#include <stdlib.h>
-#include <stdarg.h>
 #include <string.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 
-#define BOOL char
-#define FALSE 0
-#define TRUE 1
+#define LOG_FOLDER "launcher_logs"
 
 int gen_log_file();
+
 void log_trace(const char* text, ...);
 void log_info(const char* text, ...);
 void log_warn(const char* text, ...);
-void log_success(const char* text, ...);
 void log_error(const char* text, ...);
 void log_fatal(const char* text, ...);
-void zip_log();
 
+void zip_logs();
 #endif /* LOG_H */
