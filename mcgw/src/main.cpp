@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
     gen_log_file();
 
     network::download("launchermeta.mojang.com", "/mc/game/version_manifest.json", "version_manifest.json", nullptr);
-    if (std::filesystem::is_directory(".minecraft/"))
+    if (!std::filesystem::is_directory(".minecraft/"))
     {
         utils::gen_struct();
     }
