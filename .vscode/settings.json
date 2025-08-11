@@ -75,6 +75,10 @@
         "io.h": "c",
         "log.h": "c",
         "conio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "chrono": "cpp",
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "time.h": "c"
     }
 }

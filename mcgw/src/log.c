@@ -25,6 +25,7 @@ void _ntlog(const char* text, const char* level, const char* color, va_list args
 
     snprintf(string_to_print, sizeof(string_to_print), "%s%s\033[0m", color, string_to_save);
 
+    
     if (log_file) 
     {
         FILE* fp = fopen(log_file, "a");
@@ -36,6 +37,8 @@ void _ntlog(const char* text, const char* level, const char* color, va_list args
     }
 
     printf("%s", string_to_print);
+    
+    
 }
 
 int gen_log_file()

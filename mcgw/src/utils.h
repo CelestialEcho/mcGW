@@ -4,6 +4,9 @@
 #include <windows.h>
 #include <iostream>
 #include <cstdio>
+#include <filesystem>
+
+#include "log.h"
 
 namespace utils
 {

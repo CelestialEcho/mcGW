@@ -2,7 +2,7 @@
 
 void network::download(const char* baseurl, const char* path2file, const char* filename, httplib::DownloadProgress progress)
 {
-    log_trace("network.cpp::download() | '%s' file started downloading.", filename);
+    log_trace("network.cpp::download() -> '%s' file started downloading.", filename);
     httplib::Client bmclapi(baseurl);
 
     bmclapi.set_keep_alive(true);
@@ -16,17 +16,17 @@ void network::download(const char* baseurl, const char* path2file, const char* f
     {
         std::ofstream ofs(filename, std::ios::binary);
 
-        if (!ofs)  { log_error("network.cpp::download() | Failed to open file '%s' for writing.", filename); return; }
+        if (!ofs)  { log_error("network.cpp::download() -> Failed to open file '%s' for writing.", filename); return; }
 
         ofs << res->body;
         ofs.close();
 
-        log_info("network.cpp::download() | File '%s' successfully downloaded!", filename);
+        log_info("network.cpp::download() -> File '%s' successfully downloaded!", filename);
         return;
     }
     else
     {  
-        log_warn("network.cpp::download() | Download failed. HTTP status: %d", res->status);
+        log_warn("network.cpp::download() -> Download failed. HTTP status: %d", res->status);
         return;
     }
 }
