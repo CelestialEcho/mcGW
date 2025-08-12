@@ -1,0 +1,19 @@
+/*
+/
+/	This file was generated automatically using mcgw launcher :)
+/
+*/
+
+21:47:28 | [ warn  ] | utils.cpp::gen_struct() -> Minecraft stucture already generated.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/versions' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/libraries' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/assets' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/resourcepacks' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/saves' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/screenshots' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/logs' succesfully created.
+21:47:28 | [ trace ] | utils.cpp::gen_struct() -> Directory '.minecraft/mcgw_runtime' succesfully created.
+21:47:28 | [ trace ] | network.cpp::download() -> 'version_manifest.json' file started downloading.
+21:47:29 | [ info  ] | network.cpp::download() -> File 'version_manifest.json' successfully downloaded!
+21:47:29 | [ trace ] | network.cpp::download() -> '1.20.1.json' file started downloading.
+21:47:29 | [ error ] | network.cpp::download() -> Failed to open file '1.20.1.json' for writing. Error: No such file or directory

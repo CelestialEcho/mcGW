@@ -54,9 +54,8 @@ dkms.conf
 # debug information files
 *.dwo
 
-# my files
-.bin/obj/
-.bin/launcher_logs/
+# .vs
+.vs/
 
 
 

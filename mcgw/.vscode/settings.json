@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "stdlib.h": "c",
-        "miniz.h": "c",
-        "log.h": "c"
-    }
-}
