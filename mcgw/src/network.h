@@ -11,7 +11,7 @@
 
 namespace network
 {
-    void download(const char* baseurl, const char* path2file, const char* filename, httplib::DownloadProgress progress);
+    void network::download(std::string baseurl, std::string path2file_web, std::string filename, std::string path2save, httplib::DownloadProgress progress);
 }
 
 

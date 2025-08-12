@@ -11,4 +11,3 @@
 - [ ] GUI  
 - [ ] README.md
 - [ ] log zip function
-- [ ] **fix log file creation**

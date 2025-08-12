@@ -1,0 +1,8 @@
+/*
+/
+/	This file was generated automatically using mcgw launcher :)
+/
+*/
+
+18:07:00 | [ trace ] | network.cpp::download() -> 'version_manifest.json' file started downloading.
+18:07:01 | [ info  ] | network.cpp::download() -> File 'version_manifest.json' successfully downloaded!

@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-#define LOG_FOLDER ".minecraft/mcgw_logs"
+#define LOG_FOLDER "mcgw_logs"
 
 int gen_log_file();
 

@@ -19,8 +19,8 @@ void utils::gen_struct()
 {
     std::string directories[] = {".minecraft/versions", ".minecraft/libraries", ".minecraft/assets",
                                  ".minecraft/resourcepacks", ".minecraft/saves", ".minecraft/screenshots",
-                                 ".minecraft/logs", ".minecraft/mcgw_logs"}; 
-    
+                                 ".minecraft/logs"};               
+
     for (const std::string& dir : directories)
     {
         std::filesystem::create_directories(dir);
