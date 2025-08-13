@@ -38,7 +38,6 @@ void _ntlog(const char* text, const char* level, const char* color, va_list args
 
     printf("%s", string_to_print);
     
-    
 }
 
 int gen_log_file()

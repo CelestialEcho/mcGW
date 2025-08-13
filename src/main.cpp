@@ -24,15 +24,8 @@ int main(int argc, char* argv[])
     
     network::download("launchermeta.mojang.com", "/mc/game/version_manifest.json", "version_manifest.json", ".minecraft/versions/", nullptr);
 
-    std::vector<version> vers;
     version t1_20_1{"1.20.1", "https://piston-meta.mojang.com/v1/packages/7b9a67b8db5959c6d401bc10abe99815de2f8856/1.20.1.json"};
 
-    versions::parse(&vers);
-
-    for (int i = 0; i < sizeof(vers); i++)
-    {
-        std::cout << vers[i] << std::endl;
-    }
 
     versions::get(t1_20_1);
 

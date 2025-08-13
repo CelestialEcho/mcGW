@@ -20,7 +20,7 @@ void utils::gen_struct()
         log_warn("utils.cpp::gen_struct() -> Minecraft stucture already generated.");
         std::string directories[] = { ".minecraft/versions", ".minecraft/libraries", ".minecraft/assets",
                                  ".minecraft/resourcepacks", ".minecraft/saves", ".minecraft/screenshots",
-                                 ".minecraft/logs", ".minecraft/mcgw_runtime" };
+                                 ".minecraft/logs", ".minecraft/mcgw_runtime", ".minecraft/bin"};
 
         for (const std::string& dir : directories)
         {

@@ -1,29 +1,49 @@
 ﻿#include "versions.h"
 
-// https://piston-meta.mojang.com/v1/packages/b282396af887031d2f5cdcb7cbccd547f6d0067e/1.21.8.json 
 
 
-std::string _getDir(const std::string& url)
+std::string _getDir(const std::string& url) 
 {
+	return url.substr(url.find('/', url.find("://") + 3));
+}
 
-	std::string path;
-	size_t protocol_end = url.find("://");
-	size_t domain_start = (protocol_end == std::string::npos) ? 0 : protocol_end + 3;
-	size_t path_start = url.find('/', domain_start);
-
-	if (path_start == std::string::npos)
-		path = "/";
-	else
-		path = url.substr(path_start);
-	return path;
+std::string _getFile(const std::string& path) 
+{
+	size_t pos = path.find_last_of("/");
+	if (pos == std::string::npos) { return path; }
+	return path.substr(pos + 1);
 }
 
 
 void versions::get(const version& ver)
 {
-	std::filesystem::create_directories("./minecraft/versions/" + ver.id);
-	network::download("piston-meta.mojang.com", ver.url.substr(30), ver.id + ".json", "/.minecraft/versions/" + ver.id + "/", nullptr);
-	std::cout << "/.minecraft/versions/" + ver.id + "/"; // TODO
+	std::filesystem::create_directories(".minecraft/versions/" + ver.id);
+	network::download("piston-meta.mojang.com", _getDir(ver.url), ver.id + ".json", ".minecraft/versions/" + ver.id + "/", nullptr);
+	std::fstream version_json(".minecraft/versions/" + ver.id + "/" + ver.id + ".json", std::ios::in);
+	json vj = json::parse(version_json);
+
+	std::string client_jar = vj["downloads"]["client"]["url"];
+	std::vector<std::string> libs;
+
+	for (const auto& lib : vj["libraries"]) { libs.push_back(lib["downloads"]["artifact"]["path"]); }
+
+	for (const auto& lib : libs) {
+		log_info("versions.cpp::get() -> libraries.minecraft.net/%s | %s | %s | .minecraft/libraries/%s",
+			lib.c_str(),
+			lib.c_str(),
+			_getFile(lib).c_str(),
+			lib.c_str());
+
+		std::filesystem::create_directories(
+			std::filesystem::path(".minecraft/libraries/" + lib).parent_path()
+		);
+
+		network::download_ssl("libraries.minecraft.net",
+			"/" + lib,
+			_getFile(lib),
+			".minecraft/libraries/" + lib.substr(0, lib.find_last_of('/') + 1),
+			nullptr);
+	}
 }
 
 void versions::parse(std::vector<version>* vers)
