@@ -2,5 +2,7 @@ C:\Users\Booris\source\repos\mcgw\include\openssl\applink.c;C:\Users\Booris\sour
 C:\Users\Booris\source\repos\mcgw\src\logger\logger.c;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\logger.obj
 C:\Users\Booris\source\repos\mcgw\src\main.cpp;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\main.obj
 C:\Users\Booris\source\repos\mcgw\src\network\network.cpp;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\network.obj
+C:\Users\Booris\source\repos\mcgw\src\java\java.c;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\java.obj
+C:\Users\Booris\source\repos\mcgw\src\java\java.h;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\java.h.obj
 C:\Users\Booris\source\repos\mcgw\src\utils\utils.cpp;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\utils.obj
 C:\Users\Booris\source\repos\mcgw\src\versions\versions.cpp;C:\Users\Booris\source\repos\mcgw\mcgw\x64\Release\versions.obj

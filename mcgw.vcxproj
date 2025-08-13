@@ -313,6 +313,8 @@
     <ClCompile Include="src\logger\logger.c" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\network\network.cpp" />
+    <ClCompile Include="src\java\java.c" />
+    <ClCompile Include="src\java\java.h" />
     <ClCompile Include="src\utils\utils.cpp" />
     <ClCompile Include="src\versions\versions.cpp" />
   </ItemGroup>

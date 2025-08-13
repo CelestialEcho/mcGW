@@ -22,9 +22,9 @@ int main(int argc, char* argv[])
         utils::gen_struct();
     }
     
-    network::download("launchermeta.mojang.com", "/mc/game/version_manifest.json", "version_manifest.json", ".minecraft/versions/", nullptr);
+    network::download("launchermeta.mojang.com", "/mc/game/version_manifest.json", "version_manifest.json", ".minecraft/versions/");
 
-    version t1_20_1{"1.20.1", "https://piston-meta.mojang.com/v1/packages/7b9a67b8db5959c6d401bc10abe99815de2f8856/1.20.1.json"};
+    version t1_20_1{"1.20.1", "piston-meta.mojang.com/v1/packages/7b9a67b8db5959c6d401bc10abe99815de2f8856/1.20.1.json"};
 
 
     versions::get(t1_20_1);

@@ -1,9 +1,9 @@
-﻿  network.cpp
+﻿  Scanning sources for module dependencies...
   versions.cpp
      Creating library C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.lib and object C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.exp
   Generating code
-  746 of 4726 functions (15.8%) were compiled, the rest were copied from previous compilation.
+  2 of 4727 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    297 functions had inline decision re-evaluated but remain unchanged
+    9 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   mcgw.vcxproj -> C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.exe

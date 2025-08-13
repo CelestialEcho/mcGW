@@ -20,7 +20,6 @@ void log_info(const char* text, ...);
 void log_warn(const char* text, ...);
 void log_error(const char* text, ...);
 void log_fatal(const char* text, ...);
-void zip_logs();
 
 #ifdef __cplusplus
 }

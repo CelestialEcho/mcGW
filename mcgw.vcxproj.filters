@@ -485,6 +485,12 @@
     <ClCompile Include="include\openssl\applink.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\java\java.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\java\java.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\ws2_32.Lib" />

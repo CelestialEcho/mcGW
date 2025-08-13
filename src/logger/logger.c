@@ -2,7 +2,7 @@
 
 char* log_file;
 
-char* get_time(const char* format)
+static char* _getTime(const char* format)
 {
     time_t now = time(NULL);
     struct tm* t = localtime(&now);
@@ -12,12 +12,12 @@ char* get_time(const char* format)
     return buffer;
 }
 
-void _ntlog(const char* text, const char* level, const char* color, va_list args)
+static void _ntlog(const char* text, const char* level, const char* color, va_list args)
 {
     char formatted_text[256];
     char string_to_save[512];
     char string_to_print[512];
-    char* time_buffer = get_time("%H:%M:%S");
+    char* time_buffer = _getTime("%H:%M:%S");
 
     vsnprintf(formatted_text, sizeof(formatted_text), text, args);
     snprintf(string_to_save, sizeof(string_to_save), "%s | [ %-5s ] | %s\n", time_buffer, level, formatted_text);
@@ -44,7 +44,7 @@ int gen_log_file()
 {
     char base_name[256];
     char final_name[512];
-    char* time_buffer = get_time("%d_%m_%Y");
+    char* time_buffer = _getTime("%d_%m_%Y");
     int is_folder_created;
 
 
