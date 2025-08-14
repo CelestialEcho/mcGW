@@ -305,7 +305,7 @@
     <ClInclude Include="include\openssl\__DECC_INCLUDE_PROLOGUE.H" />
     <ClInclude Include="src\logger\logger.h" />
     <ClInclude Include="src\network\network.h" />
-    <ClInclude Include="src\utils\utils.h" />
+    <ClInclude Include="src\functions\functions.h" />
     <ClInclude Include="src\versions\versions.h" />
   </ItemGroup>
   <ItemGroup>
@@ -315,7 +315,7 @@
     <ClCompile Include="src\network\network.cpp" />
     <ClCompile Include="src\java\java.c" />
     <ClCompile Include="src\java\java.h" />
-    <ClCompile Include="src\utils\utils.cpp" />
+    <ClCompile Include="src\functions\functions.cpp" />
     <ClCompile Include="src\versions\versions.cpp" />
   </ItemGroup>
   <ItemGroup>
