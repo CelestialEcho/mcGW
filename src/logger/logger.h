@@ -12,7 +12,7 @@ extern "C" {
 #include <stdlib.h>
 #include <stdarg.h>
 
-#define LOG_FOLDER "mcgw_logs"
+#define LOG_FOLDER "yaml_logs"
 
 int gen_log_file();
 void log_trace(const char* text, ...);

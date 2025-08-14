@@ -1,9 +1,25 @@
 ﻿  Scanning sources for module dependencies...
+  java.h
+  Compiling...
+  java.h
+  logger.c
+C:\Users\Booris\source\repos\mcgw\src\logger\logger.c(53,25): warning C4013: 'mkdir' undefined; assuming extern returning int
+  main.cpp
+  network.cpp
+  utils.cpp
   versions.cpp
      Creating library C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.lib and object C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.exp
   Generating code
-  2 of 4727 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  497 of 4727 functions (10.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
+    272 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
+applink.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+logger.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+main.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+java.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+utils.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+java.h.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+versions.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+network.obj : warning LNK4020: a type record in 'c:\users\booris\source\repos\mcgw\mcgw\x64\release\vc143.pdb' is corrupted; some symbols and types may not be accessible from the debugger
   mcgw.vcxproj -> C:\Users\Booris\source\repos\mcgw\x64\Release\mcgw.exe

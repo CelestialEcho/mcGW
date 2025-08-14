@@ -29,20 +29,12 @@ void versions::get(const version& ver)
 
 	for (const auto& lib : libs) 
 	{
-
+		if (std::filesystem::exists(".minecraft/libraries/" + lib)) continue;
 		std::filesystem::create_directories(std::filesystem::path(".minecraft/libraries/" + lib).parent_path());
-
-		network::download("libraries.minecraft.net", "/" + lib, _getFile(lib), ".minecraft/libraries/" + lib.substr(0, lib.find_last_of('/') + 1), HTTPS);
+		network::download("libraries.minecraft.net", "/" + lib, _getFile(lib), std::filesystem::path(".minecraft/libraries/" + lib).parent_path().string(), HTTPS);
 	}
-	log_trace("Downloading %s from piston-meta.mojang.com%s to %s...",
-		(ver.id + ".jar").c_str(),
-		_getDir(vj["downloads"]["client"]["url"]).c_str(),
-		(".minecraft/versions/" + ver.id + "/").c_str());
 
-	network::download("https://piston-meta.mojang.com",
-		_getDir(vj["downloads"]["client"]["url"]),
-		ver.id + ".jar",
-		".minecraft/versions/" + ver.id + "/", HTTPS);
+	network::download("https://piston-data.mojang.com", _getDir(vj["downloads"]["client"]["url"]), ver.id + ".jar", ".minecraft/versions/" + ver.id + "/");
 }
 
 void versions::parse(std::vector<version>* vers)
@@ -71,5 +63,5 @@ std::ostream& operator<<(std::ostream& os, const version& v)
 
 void versions::run(version version)
 {
-	; // :)
+
 }

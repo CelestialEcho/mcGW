@@ -52,7 +52,7 @@ int gen_log_file()
 
     is_folder_created = mkdir(LOG_FOLDER);
 
-    snprintf(base_name, sizeof(base_name), "%s-mcgw_launch.log", time_buffer);
+    snprintf(base_name, sizeof(base_name), "%s-yaml_launch.log", time_buffer);
     free(time_buffer);
 
     int suffix = 0;
@@ -72,7 +72,7 @@ int gen_log_file()
         char auto_gen_string[] = 
         "/*\n"
         "/\n"
-        "/\tThis file was generated automatically using mcgw launcher :)\n"
+        "/\tThis file was generated automatically using yaml launcher :)\n"
         "/\n"
         "*/\n\n";
 
